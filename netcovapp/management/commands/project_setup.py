@@ -15,7 +15,7 @@ class Command(BaseCommand):
                 Operator(name='Free', code=20815),
                 Operator(name='Bouygue', code=20820),
                 ]
-            Operator.Objects.bulk_create(operators)
+            Operator.objects.bulk_create(operators)
             self.stdout.write(self.style.SUCCESS("Project ready"))
         except Exception as e:
             raise CommandError(e)
