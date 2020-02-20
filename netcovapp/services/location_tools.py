@@ -17,5 +17,4 @@ def string_to_city(q: str) -> str:
     reg = re.compile('^.*(?P<zipcode>\d{5}).*$')
     match = reg.match(q)
     postal_code = match.groupdict()['zipcode']
-    print(postal_code)
     return q.split(postal_code)[-1].lstrip()
