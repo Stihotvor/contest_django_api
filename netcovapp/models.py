@@ -12,6 +12,9 @@ class Operator(models.Model):
 class City(models.Model):
     name = models.CharField(max_length=128)
 
+    def __str__(self):
+        return self.name
+
 
 class Coverage(models.Model):
     operator = models.ForeignKey(Operator, on_delete=models.CASCADE)
@@ -20,3 +23,5 @@ class Coverage(models.Model):
     net_3g = models.BooleanField(default=False)
     net_4g = models.BooleanField(default=False)
 
+    def __str__(self):
+        return self.operator.name
