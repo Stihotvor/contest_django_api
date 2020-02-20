@@ -9,7 +9,6 @@ class CoverageView(ListAPIView):
     """
     API endpoint that allows coverage to be verified.
     """
-    # TODO: change queryset
     serializer_class = CoverageSerializer
 
     def get_queryset(self):

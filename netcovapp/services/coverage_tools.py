@@ -25,7 +25,7 @@ def __location_to_city(x: float, y: float) -> str:
 
 
 def update_coverage():
-    my_list = __request_list()[10:]
+    my_list = __request_list()[:10]
 
     Coverage.objects.all().delete()
 
