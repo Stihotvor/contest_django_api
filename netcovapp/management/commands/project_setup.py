@@ -1,7 +1,6 @@
 from django.core.management.base import BaseCommand, CommandError
 
 from netcovapp.models import Operator
-from netcovapp.services.coverage_tools import update_coverage
 
 
 class Command(BaseCommand):
