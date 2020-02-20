@@ -16,6 +16,9 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
+from netcovapp.views import CoverageView
+
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('api/verify_network/', CoverageView.as_view())
 ]
